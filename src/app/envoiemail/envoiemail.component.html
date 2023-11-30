@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Acme Web Design</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"></h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        
+      </div>
+      <div class="contact">
+        <span><mat-icon><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></mat-icon><h3>Envoi de Emails </h3></span><br>
+        
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            
+          <p>
+            <label>Email Addresse</label>
+            <input type="email" name="email"  ngModel required #email="ngModel">
+          </p>
+         
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5"  ngModel required maxlength="140" #message="ngModel"></textarea>
+          </p>
+      
+          <p class="full">
+            <button type="submit">Envoyer</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

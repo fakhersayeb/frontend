@@ -1,0 +1,25 @@
+h1 {
+    color: red;
+  }
+  #l{
+    background-color: red;
+    display: flex;
+  }
+  #s{
+    background-color: seagreen;
+   
+  }
+  body{
+    background:#f8f8f9;
+    color:#485e74;
+    line-height:1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:1em;
+  }
+  #j{
+    background-color: darkblue;
+    display: flex;
+  }
+  
+  
+  

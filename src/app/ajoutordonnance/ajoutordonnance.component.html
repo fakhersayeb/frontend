@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Acme Web Design</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"></h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+       
+      </div>
+      <div class="contact">
+       <h3>Ordonnance :</h3>
+        
+        <form [formGroup]="loginform3" (ngSubmit)="createord()" ngNoForm>
+          <p class="form-group">
+            <label>Numéro d'ordonnance :</label>
+            <input type="number" name="numord" required value="1" min="1" max="1000" class="form-control" formControlName="numord">
+          </p>
+         <br>
+         <p class="form-group">
+          <label>Prénom de patient :</label>
+          <input type="text" name="prepa" required class="form-control" minlength="4" maxlength="25"  formControlName="prepa">
+        </p><br>
+        <p class="form-group">
+          <label>Numéro de téléphone :</label>
+          <input type="tel" name="telpat" required  class="form-control" formControlName="telpat">
+        </p><br>
+          <p class="form-group">
+            <label>Texte</label>
+            <textarea name="texte" rows="5" required minlength="7" maxlength="255" class="form-control" formControlName="texte"></textarea>
+          </p>
+        
+          <p class="full">
+            <button type="submit">Enregistrer</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

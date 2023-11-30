@@ -1,0 +1,222 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Les listes</h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	<br><br>
+	
+	<div class="container">
+		<div class="card"  class="container" class="wrapper animated bounceInLeft">
+            <div class="card-body">
+                <mat-icon><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg></mat-icon><h4 class="card-title" >Liste des patients :</h4>
+                
+                
+                  
+        
+                
+                <table class="table table-hover" >
+                    <thead class="couleur">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Email</th>
+                            <th>Numéro de téléphone</th>
+                            <th>Operations</th>
+                        </tr>
+                    </thead>
+                    <tbody class="couleur">
+                        <tr *ngFor="let patient of patients">
+                            <td >{{patient.nom}}</td>
+                            <td >{{patient.prenom}}</td>
+                            <td >{{patient.email}}</td>
+                            <td >{{patient.numtel}}</td>
+                            <td style="display: flex;"> <div class="example-flex-container">
+                                <div class="example-button-container">
+                                  <button mat-fab color="primary" class="cont" (click)="delete(patient)" aria-label="Example icon button with a delete icon">
+                                    <mat-icon>delete</mat-icon>
+                                  </button>
+                                </div>
+                                </div>
+                                <div class="example-flex-container">
+                                    <div class="example-button-container">
+                                      <button mat-fab color="primary" class="cont" (click)="update(patient,patient._id)" aria-label="Example icon button with a edit icon">
+                                        <mat-icon>edit</mat-icon>
+                                      </button>
+                                    </div>
+                                    </div>
+                               </td></tr>
+                               <tr *ngIf="patients.length === 0">
+                                <td colspan="6">No patients found.</td>
+                              </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+       <br><br>
+        
+        <div class="card"   class="wrapper animated bounceInLeft">
+            <div class="card-body">
+                <mat-icon><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg></mat-icon><h4 class="card-title" >Liste des portfolios :</h4>
+               
+                <table class="table table-hover">
+            <thead class="op">
+                <tr>
+                   
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Numéro de téléphone</th>
+                    <th>Service</th>
+                    <th>Nom de médecin</th>
+                    <th>Commentaire</th>
+                    <th >Operations</th>
+                </tr>
+            </thead>
+            <tbody class="op">
+              <tr *ngFor="let portfolio of portfolios">
+                   
+                  <td>{{portfolio.nom}}</td>
+                  <td>{{portfolio.prenom}}</td>
+                  <td>{{portfolio.email}}</td>
+                  <td>{{portfolio.numtel}}</td>
+                  <td>{{portfolio.service}}</td>
+                  <td>{{portfolio.nomme}}</td>
+                  <td>{{portfolio.comm}}</td>
+                   
+                    <td style="display: flex;"> <div class="example-flex-container">
+                        <div class="example-button-container">
+                          <button mat-fab color="primary" class="cont" (click)="deleteportf(portfolio)" aria-label="Example icon button with a delete icon">
+                            <mat-icon>delete</mat-icon>
+                          </button>
+                        </div>
+                        </div>
+                        <div class="example-flex-container">
+                            <div class="example-button-container">
+                              <button mat-fab color="primary" class="cont" (click)="updateportf(portfolio,portfolio._id)" aria-label="Example icon button with a edit icon">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                            </div>
+                            </div>
+                       </td></tr>
+                       <tr *ngIf="portfolios.length === 0">
+                        <td colspan="6">No portfolios found.</td>
+                      </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br><br>
+<div class="card"  class="container" class="wrapper animated bounceInLeft">
+    <div class="card-body">
+        <mat-icon><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg></mat-icon><h4 class="card-title" >Liste des Ordonnances :</h4>
+        
+        <table class="table table-hover">
+    <thead class="col">
+        <tr>
+           <th></th>
+            <th>Numero d'ordonnance</th>
+            <th>Prénom de patient</th>
+            <th>Numéro de télélphone</th>
+            <th>Texte</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody class="col">
+      <tr *ngFor="let ordonnance of ordonnances">
+        <td>{{ordonnance.id}}</td>
+        <td>{{ordonnance.numord}}</td>
+        <td>{{ordonnance.prepa}}</td>
+        <td>{{ordonnance.telpat}}</td>
+       <td>{{ordonnance.texte}}</td>
+        <td style="display: flex;"> <div class="example-flex-container">
+            <div class="example-button-container">
+              <button mat-fab color="primary" class="cont" (click)="deleteord(ordonnance)" aria-label="Example icon button with a delete icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+            </div>
+            <div class="example-flex-container">
+                <div class="example-button-container">
+                  <button mat-fab color="primary" class="cont" (click)="updateord(ordonnance,ordonnance._id)" aria-label="Example icon button with a edit icon">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                </div>
+                </div>
+                <div class="example-flex-container">
+                  <div class="example-button-container">
+                    <button mat-fab color="primary" class="cont" aria-label="Download PDF" (click)="generatePDF(ordonnance)" >
+                      <mat-icon>picture_as_pdf</mat-icon>
+                    </button>
+                  </div>
+                  </div>
+           </td></tr>
+           <tr *ngIf="ordonnances.length === 0">
+            <td colspan="6">No ordonnances found.</td>
+          </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<br><br>
+<div class="card"  class="container" class="wrapper animated bounceInLeft">
+    <div class="card-body">
+       <div class="card-title"><mat-icon><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg></mat-icon><h4>Liste des Rendez-vous :</h4></div> 
+     
+       <table class="table table-hover">
+            <thead class="cou">
+                <tr>
+                   <th></th>
+                   <th>Numéro de rendez-vous</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Numéro de téléphone</th>
+                    <th>Date de rendez-vous</th>
+                    <th>Temps de rendez-vous</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody class="cou">
+              <tr *ngFor="let rendezvous of rendezvouss">
+                <td>{{rendezvous.id}}</td>
+                <td>{{rendezvous.numrend}}</td>
+                <td>{{rendezvous.nom}}</td>
+                <td>{{rendezvous.prenom}}</td>
+                <td>{{rendezvous.email}}</td>
+                <td>{{rendezvous.numtel}}</td>
+                <td>{{rendezvous.daterend}}</td>
+                <td>{{rendezvous.tempsrend}}</td>
+                    <td style="display: flex;"> <div class="example-flex-container">
+                        <div class="example-button-container">
+                          <button class="cont" mat-fab color="primary" (click)="deleterend(rendezvous)" aria-label="Example icon button with a delete icon">
+                            <mat-icon>delete</mat-icon>
+                          </button>
+                        </div>
+                        </div>
+                        <div class="example-flex-container">
+                            <div class="example-button-container">
+                              <button mat-fab color="primary" class="cont" (click)="updaterend(rendezvous,rendezvous._id)" aria-label="Example icon button with a edit icon">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                            </div>
+                            </div>
+                       </td></tr>
+                       <tr *ngIf="rendezvouss.length === 0">
+                        <td colspan="6">No rendezvous found.</td>
+                      </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br><br><br>
+
+
+	

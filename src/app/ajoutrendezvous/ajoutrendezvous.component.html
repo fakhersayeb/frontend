@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Acme Web Design</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"></h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        
+      </div>
+  
+          
+<mat-card>
+   
+    <mat-card-title>Gestion d'un Rendez-vous :</mat-card-title>
+    <form [formGroup]="loginform5" (ngSubmit)="createrend()" ngNoForm>
+<mat-card-content>
+    <div class="form-group">
+        <input matInput placeholder="Numéro de rendez-vous :" name="numrend" type="number" required value="1" min="1" max="1000" class="form-control" formControlName="numrend"> 
+    </div>
+    <br>
+       <div class="form-group">
+           <input matInput placeholder="Nom de patient :" name="nom" type="text" required minlength="4" maxlength="25" class="form-control" formControlName="nom"> 
+       </div>
+       <br>
+       <div class="form-group">
+        <input matInput placeholder="Prénom de patient :" name="prenom" type="text" required minlength="4" maxlength="25"  class="form-control" formControlName="prenom"> 
+       </div>
+       <br>
+       <div class="form-group">
+       <input matInput placeholder="Email :" name="email" type="email" required class="form-control" formControlName="email"> 
+    </div>
+    <br>
+    <div class="form-group">
+     <input matInput placeholder="Numéro de téléphone :" name="numtel" type="tel" required  class="form-control" formControlName="numtel"> 
+    </div>
+  <br>
+  <div class="form-group">
+    <input matInput placeholder="Date de rendez-vous :" name="daterend" type="date" required class="form-control" formControlName="daterend"> 
+</div>
+<br>
+<div class="form-group">
+  <input matInput placeholder="Temps de rendez-vous :" name="tempsrend" type="time" required class="form-control" formControlName="tempsrend"> 
+</div>
+</mat-card-content>
+<mat-card-actions>
+   
+   
+    <button mat-button  class='pull-right' type="submit" id="e">Enregistrer</button>
+</mat-card-actions>
+</form>
+</mat-card>
+
+
+</div>
+</div>
+</body>
+</html>

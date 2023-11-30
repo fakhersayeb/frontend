@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Acme Web Design</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+</head>
+<body>
+  <div class="container" >
+    <h1 class="brand"></h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        
+      </div>
+<mat-card class="couleur">
+    <mat-card-title><mat-icon><svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 18 18"><path d="M13 14c0 2.21-1.79 4-4 4s-4-1.79-4-4V3c0-1.66 1.34-3 3-3s3 1.34 3 3v9c0 1.1-.9 2-2 2s-2-.9-2-2V4h1v8c0 .55.45 1 1 1s1-.45 1-1V3c0-1.1-.9-2-2-2s-2 .9-2 2v11c0 1.66 1.34 3 3 3s3-1.34 3-3V4h1v10z"/></svg></mat-icon>Ajout de portfolio de chaque patient:
+        
+</mat-card-title>
+<form  [formGroup]="loginForm2" (ngSubmit)="createportf()" ngNoForm>
+<br>
+    
+<mat-card-content class="container" class="wrapper animated bounceInLeft"  >
+    
+    <p>si le patient est nouveau et n'a pas un portfolio donc créer un nouveau portfolio ici </p>
+    <br>
+    
+    
+    
+       <div class="form-group" >
+           <input placeholder="Nom de patient :" name="nom" type="text" required minlength="4" maxlength="25"  class="form-control" formControlName="nom" > 
+       </div >
+       <br>
+       <div class="form-group" >
+        <input  placeholder="Prénom de patient :" name="prénom" type="text" required minlength="4" maxlength="25"  class="form-control" formControlName="prenom" > 
+       </div>
+       <br>
+       <div class="form-group" >
+       <input  placeholder="Email :" name="email" type="email" required  class="form-control" formControlName="email" > 
+       </div>
+    <br>
+    <div class="form-group" >
+     <input  placeholder="Numéro de téléphone :" name="numtel" type="tel" required  class="form-control" formControlName="numtel" > 
+    </div>
+  <br>
+  <div class="form-group" >
+    <input  placeholder="Service :" name="service" type="text" required minlength="7" maxlength="12" class="form-control" formControlName="service" > 
+  </div>
+   <br>
+   
+  
+   <br>
+   <div class="form-group" >
+    <input  placeholder="Nom de médecin :" name="nomme" type="text" required minlength="4" maxlength="25"  class="form-control" formControlName="nomme" > 
+   </div>
+   
+   <br>
+   <div class="form-group" >
+    <input  placeholder="Commentaire :" name="comm" type="text" required minlength="6" maxlength="255" class="form-control" formControlName="comm" > 
+   </div>
+  
+</mat-card-content>
+<mat-card-actions  class="container" class="wrapper animated bounceInLeft" >
+   <button   class='pull-right' type="submit" id="e">Enregistrer</button>
+</mat-card-actions>
+</form>
+</mat-card>
+
+</div>
+</div>
+</body>
+</html>
+
+
+
+

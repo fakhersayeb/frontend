@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Acme Web Design</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>G.C.M</span> Aplication</h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        
+      </div>
+<mat-card>
+   
+    <mat-card-title>Mis à jour d'un portfolio :</mat-card-title>
+    <form [formGroup]="loginform6">
+<mat-card-content>
+   
+       <div class="form-group">
+           <input matInput placeholder="Nom de patient :" name="nom" type="text" required class="form-control"  minlength="4" maxlength="25" formControlName="nom"> 
+       </div>
+       <br>
+       <div class="form-group">
+        <input matInput placeholder="Prénom de patient :" name="prenom" type="text" required class="form-control"  minlength="4" maxlength="25" formControlName="prenom"> 
+       </div>
+       <br>
+       <div class="form-group">
+       <input matInput placeholder="Email :" name="email" type="email" required class="form-control" formControlName="email"> 
+    </div>
+    <br>
+    <div class="form-group">
+     <input matInput placeholder="Numéro de téléphone :" name="numtel" type="tel" required  class="form-control" formControlName="numtel"> 
+    </div>
+    <br>
+    <div class="form-group">
+        <input matInput placeholder="Service:" name="service" type="text" required class="form-control" minlength="7" maxlength="12" formControlName="service"> 
+       </div>
+       <br>
+       <div class="form-group">
+        <input matInput placeholder="Date d'entrée :" name="datee" type="date" required class="form-control"  formControlName="datee"> 
+       </div>
+       <br>
+       <div class="form-group">
+        <input matInput placeholder="Date de sortie :" name="dates" type="date" required class="form-control" formControlName="dates"> 
+       </div>
+       <br>
+       <div class="form-group">
+        <input matInput placeholder="¨Provenance :" name="prov" type="text" required class="form-control" minlength="7" maxlength="12" formControlName="prov"> 
+       </div>
+       <br>
+       <div class="form-group">
+        <input matInput placeholder="Numéro de séjour :" name="nums" type="number" required value="1" min="1" max="255" class="form-control" formControlName="nums"> 
+       </div>
+       <br>
+       <div class="form-group">
+        <input matInput placeholder="Nom de médecin :" name="nomme" type="text" required class="form-control" pattern='[A-Za-z]' minlength="8" maxlength="20" formControlName="nomme"> 
+       </div>
+       <br>
+       <div class="form-group">
+        <input matInput placeholder="Destination :" name="desti" type="tel" required class="form-control" pattern='[A-Za-z]' minlength="4" maxlength="25" formControlName="desti"> 
+       </div>
+       <br>
+       <div class="form-group">
+        <input matInput placeholder="Commentaire :" name="comm" type="text" required minlength="35" maxlength="255" class="form-control" formControlName="comm"> 
+       </div>
+</mat-card-content>
+<mat-card-actions>
+  
+   
+    <button mat-button class='pull-right' (click)="updateport()" type="submit" id="e">Enregistrer</button>
+</mat-card-actions>
+</form>
+</mat-card>
+
+</div>
+</div>
+</body>
+</html>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
